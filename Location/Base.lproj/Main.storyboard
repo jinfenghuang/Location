@@ -1,25 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Location" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jFY-rn-7k8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="eF9-46-vqY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eF9-46-vqY" firstAttribute="top" secondItem="jFY-rn-7k8" secondAttribute="top" id="1fl-7h-zgV"/>
+                            <constraint firstItem="eF9-46-vqY" firstAttribute="centerX" secondItem="jFY-rn-7k8" secondAttribute="centerX" id="69w-9S-94x"/>
+                            <constraint firstAttribute="trailing" secondItem="jFY-rn-7k8" secondAttribute="trailing" id="9nt-DG-XzV"/>
+                            <constraint firstItem="jFY-rn-7k8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ERS-CM-tpS"/>
+                            <constraint firstItem="eF9-46-vqY" firstAttribute="centerX" secondItem="jFY-rn-7k8" secondAttribute="centerX" id="EYZ-dt-twA"/>
+                            <constraint firstItem="eF9-46-vqY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="FhE-HA-MNI"/>
+                            <constraint firstItem="eF9-46-vqY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="MtA-iB-OPg"/>
+                            <constraint firstItem="eF9-46-vqY" firstAttribute="trailing" secondItem="jFY-rn-7k8" secondAttribute="trailing" id="Tpp-QE-w5d"/>
+                            <constraint firstItem="jFY-rn-7k8" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="Zks-RC-eFs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eF9-46-vqY" secondAttribute="bottom" constant="527" id="daT-wV-j8K"/>
+                            <constraint firstItem="jFY-rn-7k8" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="i1L-ZI-z58"/>
+                            <constraint firstItem="eF9-46-vqY" firstAttribute="leading" secondItem="jFY-rn-7k8" secondAttribute="leading" id="skg-cm-HFU"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eF9-46-vqY" secondAttribute="bottom" constant="468" id="uRo-gf-edj"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="eF9-46-vqY" secondAttribute="bottom" constant="527" id="zcW-4u-hD0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="69w-9S-94x"/>
+                                <exclude reference="EYZ-dt-twA"/>
+                                <exclude reference="FhE-HA-MNI"/>
+                                <exclude reference="MtA-iB-OPg"/>
+                                <exclude reference="daT-wV-j8K"/>
+                                <exclude reference="zcW-4u-hD0"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="address" destination="eF9-46-vqY" id="pnH-We-d4y"/>
+                        <outlet property="map" destination="jFY-rn-7k8" id="nqB-2l-vvn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-200" y="347"/>
         </scene>
     </scenes>
 </document>

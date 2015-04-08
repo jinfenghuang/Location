@@ -13,6 +13,8 @@
 		656C54141AAC048A00EC2517 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656C54131AAC048A00EC2517 /* Images.xcassets */; };
 		656C54171AAC048A00EC2517 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656C54151AAC048A00EC2517 /* LaunchScreen.xib */; };
 		656C54231AAC048A00EC2517 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656C54221AAC048A00EC2517 /* LocationTests.swift */; };
+		656C542D1AAC054C00EC2517 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656C542C1AAC054C00EC2517 /* MapKit.framework */; };
+		656C542F1AAC094500EC2517 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656C542E1AAC094500EC2517 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		656C541C1AAC048A00EC2517 /* LocationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		656C54211AAC048A00EC2517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656C54221AAC048A00EC2517 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		656C542C1AAC054C00EC2517 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		656C542E1AAC094500EC2517 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656C542F1AAC094500EC2517 /* CoreLocation.framework in Frameworks */,
+				656C542D1AAC054C00EC2517 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,8 @@
 		656C53FE1AAC048A00EC2517 = {
 			isa = PBXGroup;
 			children = (
+				656C542E1AAC094500EC2517 /* CoreLocation.framework */,
+				656C542C1AAC054C00EC2517 /* MapKit.framework */,
 				656C54091AAC048A00EC2517 /* Location */,
 				656C541F1AAC048A00EC2517 /* LocationTests */,
 				656C54081AAC048A00EC2517 /* Products */,
@@ -77,11 +85,8 @@
 		656C54091AAC048A00EC2517 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				656C540C1AAC048A00EC2517 /* AppDelegate.swift */,
 				656C540E1AAC048A00EC2517 /* ViewController.swift */,
 				656C54101AAC048A00EC2517 /* Main.storyboard */,
-				656C54131AAC048A00EC2517 /* Images.xcassets */,
-				656C54151AAC048A00EC2517 /* LaunchScreen.xib */,
 				656C540A1AAC048A00EC2517 /* Supporting Files */,
 			);
 			path = Location;
@@ -90,6 +95,9 @@
 		656C540A1AAC048A00EC2517 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				656C540C1AAC048A00EC2517 /* AppDelegate.swift */,
+				656C54131AAC048A00EC2517 /* Images.xcassets */,
+				656C54151AAC048A00EC2517 /* LaunchScreen.xib */,
 				656C540B1AAC048A00EC2517 /* Info.plist */,
 			);
 			name = "Supporting Files";
